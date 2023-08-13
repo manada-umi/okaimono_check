@@ -12,8 +12,8 @@ input[type="text"] {
 
 button {
     background-color: rgba(0, 0, 0, 0.3);
-    margin: 8px;
-    padding: 8px;
+    margin: 8px 6px;
+    padding: 6px;
     width: 80px;
     font-size: 8pt;
     text-align: center;
@@ -21,8 +21,8 @@ button {
     border-radius: 4px;
 }
 
-button.w60 {
-    width: 60px;
+button.w {
+    width: 40px;
 }
 
 div.button {
@@ -125,7 +125,7 @@ div.config-credit {
 div.list-button {
     margin: 0;
     padding: 0;
-    height: 70px;
+    height: 84px;
     width: calc(100vw - 20px);
     text-align: center;
 }

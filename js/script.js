@@ -1,10 +1,10 @@
 // 定数
-var STORAGE_NAME = 'okaimonolist_sd';
+var STORAGE_NAME = 'manada_umi-okaimonolist_sd';
 var ICON_LIST = ['food/milk', 'food/yogurt', 'food/cheese', 'food/egg', 'food/fish', 'food/meet',
-    'food/carrot', 'food/cabbage', 'food/tomato', 'food/cucumber',
+    'food/carrot', 'food/cabbage', 'food/tomato', 'food/cucumber','food/pumpkin',
     'food/onion', 'food/potato', 'food/eggplant', 'food/mushroom',
     'food/apple', 'food/wheat',
-    'food/rice', 'food/bread', 'food/noodles',
+    'food/rice', 'food/bread', 'food/noodles', 'food/pasta',
     'food/cup', 'food/beer', 'food/sake', 'food/wine', 'food/drink', 'food/teabag', 'food/coffeemilk',
     'food/soysauce', 'food/suger', 'food/salt', 'food/mayonnaise',
     'food/bottle', 'food/bottle2', 'food/bottle3', 'food/canning',
@@ -318,7 +318,6 @@ function pushItem(id) {
 function deleteItem() {
     var index = Number(getElementByClass('list-itemA').id.slice(9));
     data.itemList.splice(index, 1);
-    drowItemList();
 }
 
 function upItem() {
@@ -332,6 +331,10 @@ function upItem() {
     select(getElement('list-item' + (index - 1)), 'list-item');
 }
 
+function upItem10() {
+    for (let i = 0; i < 10; i++) upItem();
+}
+
 function downItem() {
     var index = Number(getElementByClass('list-itemA').id.slice(9));
     if (index == data.itemList.length - 1) return;
@@ -341,6 +344,11 @@ function downItem() {
     drow('list-item' + (index + 1), drowItemLine(data.itemList[index + 1], index + 1));
     drow('list-item' + index, drowItemLine(data.itemList[index], index));
     select(getElement('list-item' + (index + 1)), 'list-item');
+    scrollBy(0, 84);
+}
+
+function downItem10() {
+    for (let i = 0; i < 10; i++) downItem();
 }
 
 function saveItemList() {
