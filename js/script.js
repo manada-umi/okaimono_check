@@ -290,6 +290,7 @@ function drowConfigColor() {
 
 // 処理
 function initialize() {
+    window.scrollTo(0,0);
     data = load();
     drowConfig();
     drowItemGrid();
