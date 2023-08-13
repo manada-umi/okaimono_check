@@ -290,7 +290,6 @@ function drowConfigColor() {
 
 // 処理
 function initialize() {
-    window.scrollTo(0,0);
     data = load();
     drowConfig();
     drowItemGrid();
@@ -319,6 +318,7 @@ function pushItem(id) {
 function deleteItem() {
     var index = Number(getElementByClass('list-itemA').id.slice(9));
     data.itemList.splice(index, 1);
+    drowItemList();
 }
 
 function upItem() {
@@ -345,7 +345,6 @@ function downItem() {
     drow('list-item' + (index + 1), drowItemLine(data.itemList[index + 1], index + 1));
     drow('list-item' + index, drowItemLine(data.itemList[index], index));
     select(getElement('list-item' + (index + 1)), 'list-item');
-    scrollBy(0, 84);
 }
 
 function downItem10() {
