@@ -62,7 +62,7 @@ img.menu-button {
 .MainPanel {
     margin: 0;
     padding: 10px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 90px);
     width: calc(100vw - 20px);
     overflow: scroll;
 }
@@ -133,7 +133,7 @@ div.list-button {
 div.list-content {
     margin: 0;
     padding: 10px;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 180px);
     width: calc(100vw - 40px);
     overflow: scroll;
 }
